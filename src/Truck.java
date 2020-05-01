@@ -1,5 +1,5 @@
 public class Truck extends Car {
-    int loadWeight;
+    private int loadWeight;
 
     public Truck(String name, int fuelCapacity, double averageFuelComsuption, boolean coinditionerOn, int loadWeight) {
         super(name, fuelCapacity, averageFuelComsuption, coinditionerOn);
@@ -8,10 +8,10 @@ public class Truck extends Car {
 
     @Override
     double fuelUsage() {
-        if (coinditionerOn) {
-            return averageFuelComsuption + 1.6;
+        if (isCoinditionerOn()) {
+            return getAverageFuelComsuption() + 1.6;
         } else
-            return averageFuelComsuption;
+            return getAverageFuelComsuption();
     }
 
     double fuelUsageWithCargo() {
@@ -25,7 +25,7 @@ public class Truck extends Car {
 
     @Override
     double vehicleRange() {
-        return fuelCapacity / fuelTotalUsage() * 100;
+        return getFuelCapacity() / fuelTotalUsage() * 100;
     }
 
     @Override
@@ -36,11 +36,11 @@ public class Truck extends Car {
     @Override
     public String toString() {
         return "Truck{" +
-                "Nazwa: " + name +
-                ", Pojemność baku: " + fuelCapacity +
+                "Nazwa: " + getName() +
+                ", Pojemność baku: " + getFuelCapacity() +
                 "l, średnie zużycie paliwa na 100km: " + fuelTotalUsage() +
                 "l, waga ładunku: " + loadWeight +
-                "kg, Czy klimatyzacja jest włączona?:" + coinditionerOn +
+                "kg, Czy klimatyzacja jest włączona?:" + isCoinditionerOn() +
                 "}";
     }
 }
