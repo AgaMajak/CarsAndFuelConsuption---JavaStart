@@ -1,11 +1,13 @@
 public class Vehicle {
     String brand;
     int fuelCapacity;
-    int fuelCompuption;
+    double averageFuelComsuption;
 
-    public Vehicle(String brand, int fuelCapacity, int fuelCompuption) {
+    public Vehicle(String brand, int fuelCapacity, double averageFuelComsuption) {
         this.brand = brand;
         this.fuelCapacity = fuelCapacity;
-        this.fuelCompuption = fuelCompuption;
+        this.averageFuelComsuption = averageFuelComsuption;
     }
-}
+
+    }
+
