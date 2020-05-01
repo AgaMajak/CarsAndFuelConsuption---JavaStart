@@ -1,8 +1,8 @@
 public class Truck extends Car {
     int loadWeight;
 
-    public Truck(String brand, int fuelCapacity, double averageFuelComsuption, boolean coinditionerOn, int loadWeight) {
-        super(brand, fuelCapacity, averageFuelComsuption, coinditionerOn);
+    public Truck(String name, int fuelCapacity, double averageFuelComsuption, boolean coinditionerOn, int loadWeight) {
+        super(name, fuelCapacity, averageFuelComsuption, coinditionerOn);
         this.loadWeight = loadWeight;
     }
 
