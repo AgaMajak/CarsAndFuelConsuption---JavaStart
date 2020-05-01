@@ -14,21 +14,20 @@ public class Car extends Vehicle {
         this.coinditionerOn = coinditionerOn;
     }
 
-    double fuelUsage() {
+    private double fuelUsage() {
         if (coinditionerOn) {
             return getAverageFuelComsuption() + 0.8;
         } else
             return getAverageFuelComsuption();
     }
 
-    double vehicleRange() {
+    private double vehicleRange() {
         return getFuelCapacity() / fuelUsage() * 100;
     }
 
-
     void showInfo() {
         System.out.println(toString());
-        System.out.printf("Zasięg pojazu wynosi: %.2f km\n", vehicleRange());
+        System.out.printf("Zasięg pojazu wynosi: %.2f km\n\n", vehicleRange());
     }
 
     @Override

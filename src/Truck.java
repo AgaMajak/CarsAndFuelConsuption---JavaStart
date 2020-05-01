@@ -6,31 +6,30 @@ public class Truck extends Car {
         this.loadWeight = loadWeight;
     }
 
-    @Override
-    double fuelUsage() {
+    private double fuelUsage() {
         if (isCoinditionerOn()) {
             return getAverageFuelComsuption() + 1.6;
         } else
             return getAverageFuelComsuption();
     }
 
-    double fuelUsageWithCargo() {
+    private double fuelUsageWithCargo() {
         int tempCounter = loadWeight / 100;
         return tempCounter * 0.5;
     }
 
-    double fuelTotalUsage() {
+    private double fuelTotalUsage() {
         return fuelUsage() + fuelUsageWithCargo();
     }
 
-    @Override
-    double vehicleRange() {
+    private double vehicleRange() {
         return getFuelCapacity() / fuelTotalUsage() * 100;
     }
 
     @Override
     void showInfo() {
-        super.showInfo();
+        System.out.println(toString());
+        System.out.printf("Zasięg pojazu wynosi: %.2f km\n\n", vehicleRange());
     }
 
     @Override

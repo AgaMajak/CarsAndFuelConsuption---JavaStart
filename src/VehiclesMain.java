@@ -1,15 +1,23 @@
 public class VehiclesMain {
     public static void main(String[] args) {
-//        Car car1 = new Car("Toyota", 35, 4.3, false);
-//        car1.showInfo();
-//
-//        car1.coinditionerOn = true;
-//        car1.showInfo();
+        Car[] cars = {
+                new Car("Toyota", 35, 4.3, false),
+                new Car("Smart", 28, 4.0, false),
+                new Truck("Volvo", 700, 36.6, false, 10000)
+        };
 
-        Truck truck = new Truck("Volvo",700,36.6,false,2000);
-        truck.showInfo();
-        truck.setCoinditionerOn(true);
-        truck.showInfo();
+        for (Car car : cars) {
+            car.showInfo();
+        }
+
+        for (Car car : cars) {
+            car.setCoinditionerOn(true);
+            System.out.println("Włączono klimatyzację w: " + car.getName());
+        }
+
+        for (Car car : cars) {
+            car.showInfo();
+        }
 
     }
 }
