@@ -26,10 +26,10 @@ public class Car extends Vehicle {
     @Override
     public String toString() {
         return "Car{" +
-                "Czy klimatyzacja jest włączona?:" + coinditionerOn +
-                ", Nazwa: " + name + '\'' +
+                "Nazwa: " + name +
                 ", Pojemność baku: " + fuelCapacity +
-                ", średnie zużycie paliwa na 100km: " + fuelUsage() +
-                "l}\n";
+                "l, średnie zużycie paliwa na 100km: " + fuelUsage() +
+                "l, Czy klimatyzacja jest włączona?:" + coinditionerOn +
+                "}";
     }
 }

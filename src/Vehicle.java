@@ -9,5 +9,5 @@ public class Vehicle {
         this.averageFuelComsuption = averageFuelComsuption;
     }
 
-    }
+}
 
